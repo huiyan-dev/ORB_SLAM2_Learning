@@ -1,0 +1,9 @@
+#build
+build/
+cmake-build-debug/
+
+#----------idea----------
+*.iml
+.idea/
+*.ipr
+*.iws
