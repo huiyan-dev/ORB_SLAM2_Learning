@@ -117,9 +117,9 @@ void ORBextractor::ComputePyramid(cv::Mat image)
 
     for(int i = 0; i < nLevels; ++i)
     {
-        //std::string fileName = "Level_" + std::to_string(i) + ".png";
+        std::string fileName = "output/Level_" + std::to_string(i) + ".png";
         std::cout<<mvImagePyramid[i].size<<std::endl;
-        //cv::imwrite(fileName, mvImagePyramid[i]);
+        cv::imwrite(fileName, mvImagePyramid[i]);
     }
     std::cout<<"#---------------------end : ComputePyramid(image)----------------------------------------------#"<<std::endl;
 
@@ -522,7 +522,7 @@ for(int i = 0; i < 8; ++i)
 }
 for(int i = 0; i < 8; ++i)
 {
-    std::string fileName = "Level_" + to_string(i)+"_features.png";
+    std::string fileName = "output/Level_" + to_string(i)+"_features.png";
     cv::imwrite(fileName, outImg[i]);
 }
 return 0;
